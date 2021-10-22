@@ -6,22 +6,22 @@ import { UserPhoto } from '../UserPhoto';
 
 import { styles } from './styles';
 
-export type User = {
+type User = {
   name: string;
   avatar_url: string;
 }
 
-export type Message = {
+export type MessageProps = {
   id: string;
   text: string;
   user: User;
 }
 
-type MessageProps = {
-  data: Message;
+type Props = {
+  data: MessageProps;
 }
 
-export const Message = ({ data }: MessageProps) => {
+export const Message = ({ data }: Props) => {
   return (
     <MotiView
       style={styles.container}
